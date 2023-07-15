@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  max-width: 100vw;
+  transition: all 0.5s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+  @apply text-black dark:text-white bg-white dark:bg-black;
+}
+
+.navBackground {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(0, 0, 0, 1);
+
+  @apply dark:bg-black dark:bg-opacity-[0.2] dark:border-white
+  /* @apply bg-white dark:bg-black; */;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 2.5em;
+  height: 1.5em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  /* cursor: pointer; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #223243;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1em;
+  width: 1em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.26em;
+  background-color: #223243;
+  box-shadow: inset 2px -2px 0 1.8px #fff;
+  transition: 0.4s;
+  animation: anima1 0.3s linear;
+}
+
+@keyframes anima1 {
+  0% {
+    transform: translateX(0.9em);
+  }
+
+  80% {
+    transform: translateX(0.3em);
+  }
+
+  100% {
+    transform: translateX(0em);
+  }
+}
+
+.switch input:checked + .slider:before {
+  background-color: yellow;
+  box-shadow: none;
+  transform: translateX(0.9em);
+  animation: anima 0.3s linear;
+}
+
+@keyframes anima {
+  0% {
+    transform: translateX(0px);
+  }
+
+  80% {
+    transform: translateX(0.8em);
+  }
+
+  100% {
+    transform: translateX(0.9em);
+  }
+}
