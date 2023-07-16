@@ -58,53 +58,6 @@ const Contact = () => {
   return (
     <div className="sm:pr-[15%] sm:pl-[8%] max-sm:mx-[10%] flex flex-1 my-auto justify-center items-center sm:mt-8">
       <div className="flex flex-1 flex-col items-center">
-        {/* <motion.div className="p-8 rounded-2xl flex justify-center items-center flex-col">
-          <h1 className="">Get in Touch</h1>
-          <form onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
-            <label className="flex flex-col">
-              <span className="font-medium mb-4">Your Name</span>
-              <input
-                type="text"
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                placeholder="Whats your name?"
-                className="py-4 px-6 rounded-lg outline-none border-none font-medium"
-              />
-            </label>
-            <label className="flex flex-col">
-              <span className="font-medium mb-4">Your Email</span>
-              <input
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                placeholder="Whats your Email?"
-                className="py-4 px-6 rounded-lg outline-none border-none font-medium"
-              />
-            </label>
-            <label className="flex flex-col">
-              <span className="font-medium mb-4">Your Message</span>
-              <textarea
-                rows={7}
-                // type="text"
-                name="message"
-                value={form.message}
-                onChange={handleChange}
-                placeholder="What do you want to say?"
-                className="py-4 px-6 rounded-lg outline-none border-none font-medium"
-              />
-            </label>
-            <button
-              type="submit"
-              className=" py-3 px-8 outline-none w-fit font-bold shadow-md rounded-xl hover:bg-white-100 hover:text-black-100 transition-all duration-200 ease-in-out"
-              disabled={loading}
-            >
-              {loading ? "Sending..." : "Send"}
-            </button>
-          </form>
-        </motion.div> */}
-
         <h1 className="text-4xl sm:text-5xl md:text-6xl mb-8 font-bold text-center">
           Get in Touch
         </h1>
