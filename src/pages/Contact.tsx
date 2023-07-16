@@ -1,7 +1,7 @@
 import { useState, FormEvent, ChangeEvent } from "react";
 import { Transition } from "../components";
 import emailjs from "@emailjs/browser";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -42,7 +42,7 @@ const Contact = () => {
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
-      .then((result) => {
+      .then(() => {
         alert("Thank You! I'll get back to you shortly");
         setForm({ name: "", email: "", message: "" });
       })

@@ -1,6 +1,6 @@
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { Home, About, Work, Projects, Contact } from "./pages";
+import { Home, About, Projects, Contact } from "./pages";
 
 const AnimatedRoutes = ({ theme }: { theme: string }) => {
   const location = useLocation();
