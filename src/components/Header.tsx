@@ -1,4 +1,6 @@
 import { headerLinks } from "../constants";
+import { logo, logoWhite } from "../assets";
+import { Link } from "react-router-dom";
 
 const Header = ({
   theme,
@@ -13,7 +15,13 @@ const Header = ({
   };
 
   return (
-    <header className="top-0 right-0 left-0 w-full flex justify-center mb-6 sm:m-0 sm:justify-end items-center py-8 px-[10%] z-50">
+    <header className="top-0 right-0 left-0 w-full flex flex-col sm:flex-row gap-4 sm:gap-0 justify-center mb-6 sm:m-0 sm:justify-between items-center py-8 sm:pr-[15%] sm:pl-[8%] z-10">
+      <Link to="/" className="flex gap-2">
+        <img src={theme === "dark" ? logoWhite : logo} height={24} width={24} />
+        <p className=" text-lg">
+          <span className="font-bold">Khizar</span> Nawab
+        </p>
+      </Link>
       <div className="flex flex-row items-center">
         <ul className="flex gap-6 mr-6">
           {headerLinks.map((link, index) => (
@@ -50,8 +58,6 @@ const Header = ({
           </label>
         </div>
       </div>
-
-      <div></div>
     </header>
   );
 };

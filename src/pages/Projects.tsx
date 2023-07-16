@@ -5,7 +5,7 @@ import { clip, clipWhite, github, githubWhite } from "../assets";
 
 const Projects = ({ theme }: { theme: string }) => {
   return (
-    <div className="sm:pr-[15%] sm:pl-[8%] max-sm:mx-[10%] flex flex-1 flex-col my-auto items-center justify-center">
+    <div className="sm:pr-[15%] sm:pl-[8%] max-sm:mx-[10%] flex flex-1 flex-col my-auto items-center justify-center sm:mt-8">
       <div>
         <div className="mb-10">
           <h1 className="text-4xl sm:text-5xl md:text-6xl mb-8 font-bold text-center">
@@ -32,7 +32,7 @@ const Projects = ({ theme }: { theme: string }) => {
                 <img
                   src={project.image}
                   alt={`${project.name} image`}
-                  className=" aspect-[5/3] md:max-w-[500px] w-full h-full object-cover rounded-lg md:border-2 border-black dark:border-white"
+                  className="aspect-[5/3] md:max-w-[500px] w-full h-full object-cover rounded-lg md:border-2 border-black dark:border-white"
                 />
               </div>
               <div

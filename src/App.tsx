@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import AnimatedRoutes from "./AnimatedRoutes";
 import { Navbar, Header, Footer } from "./components";
+import { Landing } from "./pages";
 import FOG from "vanta/src/vanta.fog.js";
 import { vantConfigDark, vantConfigLight } from "./styles";
 import AnimatedCursor from "react-animated-cursor";
@@ -36,6 +37,7 @@ function App() {
   return (
     <div className="w-screen min-h-screen m-0 p-0 flex flex-col">
       <BrowserRouter>
+        <Landing theme={theme} />
         <AnimatedCursor
           color={theme === "dark" ? "0,0,0" : "255, 255, 255"}
           innerSize={8}

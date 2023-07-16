@@ -17,7 +17,7 @@ const Navbar = ({ theme }: { theme: string }) => {
 
   return (
     <nav className="flex justify-center items-center fixed bottom-0 w-full h-20 sm:top-0 sm:right-2 sm:h-screen sm:w-20 z-50">
-      <ul className=" max-sm:w-full sm:h-[45%] sm:max-h-[400px] flex justify-between items-center flex-row sm:flex-col navBackground p-1 text-xs m-2">
+      <ul className=" max-sm:w-full sm:h-[40%] sm:max-h-[400px] flex justify-between items-center flex-row sm:flex-col navBackground p-1 text-xs m-2">
         {navLinks.map((link) => (
           <li
             key={link.name}

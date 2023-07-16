@@ -45,6 +45,8 @@ import rental from "./car-rental.jpeg";
 import space from "./space-tourism.jpeg";
 
 import me from "./KhizarNawab.png";
+import logo from "./logo.svg";
+import logoWhite from "./logo-white.svg";
 
 export {
   home,
@@ -87,4 +89,6 @@ export {
   space,
   clip,
   clipWhite,
+  logo,
+  logoWhite,
 };

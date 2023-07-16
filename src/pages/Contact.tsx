@@ -1,4 +1,4 @@
-import { useState, useRef, FormEvent, ChangeEvent } from "react";
+import { useState, FormEvent, ChangeEvent } from "react";
 import { Transition } from "../components";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
@@ -53,64 +53,113 @@ const Contact = () => {
       .finally(() => {
         setLoading(false);
       });
-
-    return (
-      <div className="pr-[15%] pl-[8%] flex flex-1 my-auto">
-        <div>
-          <motion.div className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
-            <p className="">Get in Touch</p>
-            <h3 className="">Contact.</h3>
-            <form onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
-              <label className="flex flex-col">
-                <span className="text-white font-medium mb-4">Your Name</span>
-                <input
-                  type="text"
-                  name="name"
-                  value={form.name}
-                  onChange={handleChange}
-                  placeholder="Whats your name?"
-                  className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-                />
-              </label>
-              <label className="flex flex-col">
-                <span className="text-white font-medium mb-4">Your Email</span>
-                <input
-                  type="email"
-                  name="email"
-                  value={form.email}
-                  onChange={handleChange}
-                  placeholder="Whats your Email?"
-                  className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-                />
-              </label>
-              <label className="flex flex-col">
-                <span className="text-white font-medium mb-4">
-                  Your Message
-                </span>
-                <textarea
-                  rows={7}
-                  // type="text"
-                  name="message"
-                  value={form.message}
-                  onChange={handleChange}
-                  placeholder="What do you want to say?"
-                  className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-                />
-              </label>
-              <button
-                type="submit"
-                className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl hover:bg-white-100 hover:text-black-100 transition-all duration-200 ease-in-out"
-                disabled={loading}
-              >
-                {loading ? "Sending..." : "Send"}
-              </button>
-            </form>
-          </motion.div>
-        </div>
-        <Transition />
-      </div>
-    );
   };
+
+  return (
+    <div className="sm:pr-[15%] sm:pl-[8%] max-sm:mx-[10%] flex flex-1 my-auto justify-center items-center sm:mt-8">
+      <div className="flex flex-1 flex-col items-center">
+        {/* <motion.div className="p-8 rounded-2xl flex justify-center items-center flex-col">
+          <h1 className="">Get in Touch</h1>
+          <form onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
+            <label className="flex flex-col">
+              <span className="font-medium mb-4">Your Name</span>
+              <input
+                type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="Whats your name?"
+                className="py-4 px-6 rounded-lg outline-none border-none font-medium"
+              />
+            </label>
+            <label className="flex flex-col">
+              <span className="font-medium mb-4">Your Email</span>
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="Whats your Email?"
+                className="py-4 px-6 rounded-lg outline-none border-none font-medium"
+              />
+            </label>
+            <label className="flex flex-col">
+              <span className="font-medium mb-4">Your Message</span>
+              <textarea
+                rows={7}
+                // type="text"
+                name="message"
+                value={form.message}
+                onChange={handleChange}
+                placeholder="What do you want to say?"
+                className="py-4 px-6 rounded-lg outline-none border-none font-medium"
+              />
+            </label>
+            <button
+              type="submit"
+              className=" py-3 px-8 outline-none w-fit font-bold shadow-md rounded-xl hover:bg-white-100 hover:text-black-100 transition-all duration-200 ease-in-out"
+              disabled={loading}
+            >
+              {loading ? "Sending..." : "Send"}
+            </button>
+          </form>
+        </motion.div> */}
+
+        <h1 className="text-4xl sm:text-5xl md:text-6xl mb-8 font-bold text-center">
+          Get in Touch
+        </h1>
+        <form
+          onSubmit={handleSubmit}
+          className="flex w-full sm:w-3/4 lg:sm:w-1/2 flex-col gap-8 my-6 border-2 border-black dark:border-white p-4 sm:p-6 rounded-xl formBackground"
+        >
+          <label className="flex flex-col cursor-none">
+            <span className="font-semibold text-lg mb-4 ">Name</span>
+            <input
+              type="text"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              placeholder="Whats your name?"
+              className="py-4 px-6 rounded-lg outline-none font-medium bg-white dark:bg-black border-2 border-black dark:border-white"
+            />
+          </label>
+
+          <label className="flex flex-col">
+            <span className="font-semibold mb-4 text-lg">Email</span>
+            <input
+              type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="Whats your Email"
+              className="py-4 px-6 rounded-lg outline-none font-medium bg-white dark:bg-black border-2 border-black dark:border-white"
+            />
+          </label>
+
+          <label className="flex flex-col">
+            <span className="font-semibold mb-4 text-lg">Message</span>
+            <textarea
+              rows={7}
+              // type="text"
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              placeholder="What do you want to say?"
+              className="py-4 px-6 rounded-lg outline-none font-medium bg-white dark:bg-black border-2 border-black dark:border-white"
+            />
+          </label>
+          <button
+            type="submit"
+            className=" py-3 px-8 outline-none w-fit font-bold shadow-md rounded-xl hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200 ease-in-out bg-white dark:bg-black border-2 border-black dark:border-white"
+            disabled={loading}
+          >
+            {loading ? "Sending..." : "Send"}
+          </button>
+        </form>
+      </div>
+      <Transition />
+    </div>
+  );
 };
 
 export default Contact;

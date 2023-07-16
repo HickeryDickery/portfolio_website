@@ -34,6 +34,16 @@ body {
   /* @apply bg-white dark:bg-black; */;
 }
 
+.formBackground {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  @apply dark:bg-black dark:bg-opacity-[0.3] dark:border-white;
+}
+
 /* The switch - the box around the slider */
 .switch {
   font-size: 17px;
@@ -53,7 +63,6 @@ body {
 /* The slider */
 .slider {
   position: absolute;
-  /* cursor: pointer; */
   top: 0;
   left: 0;
   right: 0;

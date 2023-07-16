@@ -5,7 +5,7 @@ import { skills } from "../constants";
 
 const About = () => {
   return (
-    <div className="sm:pr-[15%] sm:pl-[8%] max-sm:mx-[10%] flex flex-1 flex-col my-auto items-center justify-center">
+    <div className="sm:pr-[15%] sm:pl-[8%] max-sm:mx-[10%] flex flex-1 flex-col my-auto items-center justify-center sm:mt-8">
       <div>
         <div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl mb-8 font-bold">

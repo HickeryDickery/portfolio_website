@@ -9,7 +9,7 @@ const Home = ({ theme }: { theme: string }) => {
   const [hover, setHover] = useState(false);
 
   return (
-    <div className="sm:pr-[15%] sm:pl-[8%] max-sm:mx-[8%] flex flex-1 my-auto items-center justify-center">
+    <div className="sm:pr-[15%] sm:pl-[8%] max-sm:mx-[8%] flex flex-1 my-auto items-center">
       <div className="flex flex-col lg:flex-row w-full justify-between items-center max-w-6xl">
         <div className="text-center sm:text-left">
           <h1 className="text-4xl sm:text-5xl md:text-6xl mb-8 font-bold">

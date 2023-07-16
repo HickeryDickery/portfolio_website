@@ -51,14 +51,14 @@ const navLinks = [
       dark: about,
     },
   },
-  {
-    name: "Work",
-    path: "/work",
-    icons: {
-      light: workWhite,
-      dark: work,
-    },
-  },
+  // {
+  //   name: "Work",
+  //   path: "/work",
+  //   icons: {
+  //     light: workWhite,
+  //     dark: work,
+  //   },
+  // },
   {
     name: "Projects",
     path: "/projects",

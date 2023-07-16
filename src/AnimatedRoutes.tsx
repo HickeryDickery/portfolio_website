@@ -10,7 +10,7 @@ const AnimatedRoutes = ({ theme }: { theme: string }) => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home theme={theme} />} />
         <Route path="/about" element={<About />} />
-        <Route path="/work" element={<Work />} />
+        {/* <Route path="/work" element={<Work />} /> */}
         <Route path="/projects" element={<Projects theme={theme} />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
